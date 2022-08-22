@@ -37,8 +37,28 @@
   system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = true;
   system.defaults.".GlobalPreferences"."com.apple.sound.beep.sound" = "/System/Library/Sounds/Funk.aiff";
   system.defaults.dock.appswitcher-all-displays = false;
+  system.defaults.dock.autohide = false;
   system.defaults.dock.autohide-delay = "0.24";
+  system.defaults.dock.autohide-time-modifier = "1.0";
+  system.defaults.dock.dashboard-in-overlay = true;
+  system.defaults.dock.enable-spring-load-actions-on-all-items = true;
+  system.defaults.dock.expose-animation-duration  = "1.0";
+  system.defaults.dock.expose-group-by-app  = true;
+  system.defaults.dock.launchanim  = true;
+  system.defaults.dock.mineffect  = "genie";
+  system.defaults.dock.minimize-to-application = true;
+  system.defaults.dock.mouse-over-hilite-stack = true;
+  system.defaults.dock.mru-spaces = true;
   system.defaults.dock.orientation = "left";
+  system.defaults.dock.show-process-indicators = true;
+  system.defaults.dock.showhidden = true;
+  system.defaults.dock.show-recents = true;
+  system.defaults.dock.static-only = true;
+  system.defaults.dock.tilesize = 48;
+  system.defaults.dock.wvous-tl-corner = 1;
+  system.defaults.dock.wvous-bl-corner = 2;
+  system.defaults.dock.wvous-tr-corner = 3;
+  system.defaults.dock.wvous-br-corner = 4;
   system.defaults.screencapture.location = "/tmp";
   system.defaults.smb.NetBIOSName = "IMAC-000000";
   system.defaults.smb.ServerDescription = ''Darwin\\\\U2019s iMac'';
@@ -92,9 +112,29 @@
     grep "defaults write -g 'com.apple.springing.delay' -float 0.0" ${config.out}/activate-user
     grep "defaults write -g 'com.apple.swipescrolldirection' -bool YES" ${config.out}/activate-user
     grep "defaults write .GlobalPreferences 'com.apple.sound.beep.sound' -string '/System/Library/Sounds/Funk.aiff'" ${config.out}/activate-user
-    grep "defaults write com.apple.dock 'autohide-delay' -float 0.24" ${config.out}/activate-user
     grep "defaults write com.apple.dock 'appswitcher-all-displays' -bool NO" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'autohide' -bool NO" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'autohide-delay' -float 0.24" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'autohide-time-modifier' -float 1.0" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'dashboard-in-overlay' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'enable-spring-load-actions-on-all-items' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'expose-animation-duration' -float 1.0" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'expose-group-by-app' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'launchanim' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'mineffect' -string 'genie'" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'minimize-to-application' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'mouse-over-hilite-stack' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'mru-spaces' -bool YES" ${config.out}/activate-user
     grep "defaults write com.apple.dock 'orientation' -string 'left'" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'show-process-indicators' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'showhidden' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'show-recents' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'static-only' -bool YES" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'tilesize' -int 48" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'wvous-tl-corner' -int 1" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'wvous-bl-corner' -int 2" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'wvous-tr-corner' -int 3" ${config.out}/activate-user
+    grep "defaults write com.apple.dock 'wvous-br-corner' -int 4" ${config.out}/activate-user
     grep "defaults write com.apple.screencapture 'location' -string '/tmp'" ${config.out}/activate-user
     grep "defaults write com.apple.universalaccess 'reduceTransparency' -bool YES" ${config.out}/activate-user
     grep "defaults write com.apple.universalaccess 'closeViewScrollWheelToggle' -bool YES" ${config.out}/activate-user
